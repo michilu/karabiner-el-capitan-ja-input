@@ -1,0 +1,29 @@
+!!! XML
+%root
+  %item
+    %identifier private.ja_input_command_on_webkit
+    %name Turn off the Japanese input mode when Command(⌘ )+X/C/V keys for El Capitan
+
+    %inputmode_only JAPANESE
+    %only SAFARI,GOOGLE_CHROME,Chromium
+
+    -#%include(path='command.xml')
+    -#  %replacementdef
+    -#    %replacementname KEY
+    -#    %replacementvalue KeyCode::A
+    -#%include(path='command.xml')
+    -#  %replacementdef
+    -#    %replacementname KEY
+    -#    %replacementvalue KeyCode::Z
+    %include(path='command.xml')
+      %replacementdef
+        %replacementname KEY
+        %replacementvalue KeyCode::X
+    %include(path='command.xml')
+      %replacementdef
+        %replacementname KEY
+        %replacementvalue KeyCode::C
+    %include(path='command.xml')
+      %replacementdef
+        %replacementname KEY
+        %replacementvalue KeyCode::V
